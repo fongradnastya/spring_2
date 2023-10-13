@@ -1,6 +1,5 @@
 package com.example.demo;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -14,39 +13,44 @@ import org.springframework.beans.factory.annotation.Value;
 public class AppConfig {
 
     /**
-     * Значение процессора, получаемое из внешних свойств.
+     * Значение максимальной температуры, получаемое из внешних свойств
      */
     @Value("${maxTemperature}")
     private double maxTemperature;
 
     /**
-     * Значение оперативной памяти, получаемое из внешних свойств.
+     * Значение минимальной температуры, получаемое из внешних свойств
      */
     @Value("${minTemperature}")
     private double minTemperature;
 
     /**
-     * Значение видеокарты, получаемое из внешних свойств.
+     * Значение ширины холодильника, получаемое из внешних свойств
      */
     @Value("${width}")
     private double width;
 
     /**
-     * Значение жесткого диска, получаемое из внешних свойств.
+     * Значение высоты холодильника, получаемое из внешних свойств
      */
     @Value("${height}")
     private double height;
 
+    /**
+     * Значение глубины холодильника, получаемое из внешних свойств
+     */
     @Value("${depth}")
     private double depth;
 
+    /**
+     * Значение типа компрессора, получаемое из внешних свойств
+     */
     @Value("${compressorType}")
     private String compressorType;
 
     /**
-     * Определяет бин PersonalComputer и внедряет значения из внешних свойств.
-     *
-     * @return Бин PersonalComputer
+     * Определяет бин Refrigerator и внедряет значения из внешних свойств
+     * @return Бин Refrigerator
      */
     @Bean
     public TemperatureControl refrigerator() {
@@ -59,8 +63,7 @@ public class AppConfig {
     }
 
     /**
-     * Определяет бин User, который зависит от бина PersonalComputer.
-     *
+     * Определяет бин User, который зависит от бина Refrigerator
      * @return Бин User
      */
     @Bean

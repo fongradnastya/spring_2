@@ -55,6 +55,6 @@ mvn clean package
 После успешной сборки и упаковки, Вы можете запустить Ваше приложение с помощью команды:
 
 ```
-java -jar .\target\java-3.0.jar
+java -jar .\target\demo2-0.0.1-SNAPSHOT.jar
 
 ```

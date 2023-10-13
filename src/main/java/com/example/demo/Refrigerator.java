@@ -178,18 +178,18 @@ public class Refrigerator implements TemperatureControl{
     }
 
     /**
-     * Инициализация объекта PersonalComputer
+     * Инициализация объекта Refrigerator
      */
     @PostConstruct
     public void init() {
-        System.out.println("Initialising PersonalComputer");
+        System.out.println("Инициализация объекта холодильника");
     }
 
     /**
-     * Уничтожение объекта PersonalComputer
+     * Уничтожение объекта Refrigerator
      */
     @PreDestroy
     public void destroy() {
-        System.out.println("Destroying PersonalComputer");
+        System.out.println("Уничтожение объекта холодильника");
     }
 }
